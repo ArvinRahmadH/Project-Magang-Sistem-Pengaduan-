@@ -127,8 +127,8 @@
 }
 
 .filter-btn.active {
-    background: #0d6efd;
-    border-color: #0d6efd;
+    background: #396EBD;
+    border-color: #396EBD;
     color: white;
 }
 

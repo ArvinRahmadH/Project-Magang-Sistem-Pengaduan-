@@ -1,32 +1,32 @@
 <style>
     :root {
-      --primary-color: #4361ee;
-      --secondary-color: #3a0ca3;
-      --sidebar-bg: #1a1d28;
+      --primary-color: #4A5568;
+      --secondary-color: #2D3748;
+      --sidebar-bg: #1A202C;
       --card-bg: #ffffff;
-      --text-light: #8a8d93;
-      --success-color: #4cc9f0;
-      --warning-color: #f8961e;
-      --danger-color: #f94144;
+      --text-light: #718096;
+      --success-color: #48BB78;
+      --warning-color: #ED8936;
+      --danger-color: #FC8181;
     }
 
     body {
-      background-color: #f5f7fb;
+      background-color: #F7FAFC;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
+      color: #2D3748;
     }
 
-    /* Sidebar Styling */
+    /* Sidebar Styling - Abu-abu Elegan */
     .sidebar {
       min-height: 100vh;
-      background: linear-gradient(180deg, var(--sidebar-bg) 0%, #131722 100%);
+      background: linear-gradient(180deg, #1A202C 0%, #0D1117 100%);
       color: #fff;
       position: fixed;
       top: 0;
       left: 0;
       width: 260px;
       padding: 25px 15px;
-      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
       z-index: 1000;
       transition: all 0.3s ease;
     }
@@ -34,7 +34,7 @@
     .sidebar-header {
       padding-bottom: 25px;
       margin-bottom: 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .sidebar-header h2 {
@@ -48,7 +48,7 @@
     }
 
     .sidebar-header h2 i {
-      color: var(--primary-color);
+      color: #A0AEC0;
     }
 
     .sidebar-nav {
@@ -61,7 +61,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      color: #b0b3b8;
+      color: #A0AEC0;
       padding: 12px 15px;
       border-radius: 10px;
       text-decoration: none;
@@ -70,15 +70,15 @@
     }
 
     .sidebar-nav a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
       transform: translateX(5px);
     }
 
     .sidebar-nav a.active {
-      background-color: var(--primary-color);
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+      background-color: #1D468F;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(74, 85, 104, 0.3);
     }
 
     .sidebar-nav a i {
@@ -144,7 +144,7 @@
 
     .content-header h1 {
       font-weight: 700;
-      color: #2d3748;
+      color: #1A202C;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -152,27 +152,32 @@
     }
 
     .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
+      background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+      border: none;
       padding: 10px 20px;
       border-radius: 10px;
       font-weight: 600;
       transition: all 0.3s ease;
+      color: white;
     }
 
     .btn-primary:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+      background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+      box-shadow: 0 5px 15px rgba(74, 85, 104, 0.3);
+      color: white;
+    }
+
+    .btn-primary i {
+      color: white;
     }
 
     /* Card Styling */
     .main-card {
       background-color: var(--card-bg);
       border-radius: 18px;
-      border: none;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 8px 30px rgba(74, 85, 104, 0.06);
       overflow: hidden;
       padding: 25px;
     }
@@ -189,7 +194,7 @@
     }
 
     .table thead th {
-      background-color: var(--primary-color);
+      background: linear-gradient(135deg, #1F4EA1);
       color: white;
       font-weight: 600;
       padding: 18px 15px;
@@ -201,12 +206,12 @@
     }
 
     .table tbody tr {
-      border-bottom: 1px solid #f1f3f9;
+      border-bottom: 1px solid #EDF2F7;
       transition: all 0.2s ease;
     }
 
     .table tbody tr:hover {
-      background-color: rgba(67, 97, 238, 0.05);
+      background-color: rgba(74, 85, 104, 0.04);
       transform: translateY(-1px);
     }
 
@@ -214,8 +219,9 @@
       padding: 16px 15px;
       vertical-align: middle;
       border-top: none;
-      border-bottom: 1px solid #f1f3f9;
+      border-bottom: 1px solid #EDF2F7;
       max-width: 250px;
+      color: #2D3748;
     }
 
     /* Fix untuk kolom judul dan isi */
@@ -239,6 +245,7 @@
       text-overflow: ellipsis;
       max-height: 3em;
       line-height: 1.5em;
+      color: #2D3748;
     }
 
     /* Tooltip untuk konten yang dipotong */
@@ -252,7 +259,7 @@
       position: absolute;
       left: 0;
       top: 100%;
-      background: #333;
+      background: #2D3748;
       color: white;
       padding: 10px 15px;
       border-radius: 6px;
@@ -267,7 +274,7 @@
     .read-more-btn {
       background: none;
       border: none;
-      color: var(--primary-color);
+      color: #4A5568;
       font-size: 0.8rem;
       padding: 2px 0;
       cursor: pointer;
@@ -278,9 +285,10 @@
 
     .read-more-btn:hover {
       text-decoration: underline;
+      color: #2D3748;
     }
 
-    /* Badge Styling */
+    /* Badge Styling - Abu-abu Elegan */
     .badge {
       padding: 6px 12px;
       border-radius: 20px;
@@ -294,15 +302,18 @@
     }
 
     .bg-warning {
-      background-color: var(--warning-color) !important;
+      background-color: #EDF2F7 !important;
+      color: #4A5568 !important;
     }
 
     .bg-info {
-      background-color: var(--success-color) !important;
+      background-color: #E2E8F0 !important;
+      color: #2D3748 !important;
     }
 
     .bg-success {
-      background-color: #2ecc71 !important;
+      background-color: #CBD5E0 !important;
+      color: #1A202C !important;
     }
 
     /* Action Buttons */
@@ -322,23 +333,26 @@
     }
 
     .btn-danger {
-      background-color: var(--danger-color);
-      border-color: var(--danger-color);
+      background-color: #FC8181;
+      border-color: #FC8181;
+      color: white;
     }
 
     .btn-danger:hover {
-      background-color: #d32f2f;
-      border-color: #d32f2f;
+      background-color: #F56565;
+      border-color: #F56565;
+      color: white;
     }
 
     .btn-outline-primary {
-      border-color: var(--primary-color);
-      color: var(--primary-color);
+      border-color: #4A5568;
+      color: #4A5568;
     }
 
     .btn-outline-primary:hover {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
+      background-color: #4A5568;
+      border-color: #4A5568;
+      color: white;
     }
 
     /* Form Select */
@@ -346,15 +360,16 @@
       border-radius: 8px;
       padding: 6px 30px 6px 12px;
       font-size: 0.85rem;
-      border: 1px solid #e2e8f0;
-      background-color: #f8fafc;
+      border: 1px solid #E2E8F0;
+      background-color: #F7FAFC;
       transition: all 0.3s ease;
       min-width: 120px;
+      color: #2D3748;
     }
 
     .form-select-sm:focus {
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+      border-color: #4A5568;
+      box-shadow: 0 0 0 3px rgba(74, 85, 104, 0.1);
       background-color: white;
     }
 
@@ -370,17 +385,17 @@
 
     .note-image:hover {
       transform: scale(1.8);
-      border-color: var(--primary-color);
+      border-color: #4A5568;
       z-index: 10;
       position: relative;
     }
 
     /* Empty state */
     .text-muted {
-      color: #a0aec0 !important;
+      color: #A0AEC0 !important;
     }
 
-    /* Stats summary */
+    /* Stats summary - Abu-abu Elegan */
     .stats-summary {
       display: flex;
       gap: 20px;
@@ -392,14 +407,15 @@
       background-color: white;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(74, 85, 104, 0.06);
+      border: 1px solid #E2E8F0;
       flex: 1;
       min-width: 150px;
     }
 
     .stat-card h3 {
       font-size: 0.9rem;
-      color: var(--text-light);
+      color: #718096;
       margin-bottom: 8px;
       font-weight: 600;
     }
@@ -407,7 +423,7 @@
     .stat-card .value {
       font-size: 1.8rem;
       font-weight: 700;
-      color: var(--primary-color);
+      color: #2D3748;
     }
 
     /* Animation for new elements */
@@ -427,27 +443,27 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #EDF2F7;
       border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--primary-color);
+      background: #4A5568;
       border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--secondary-color);
+      background: #2D3748;
     }
 
-    /* Tab Styling */
+    /* Tab Styling - Abu-abu Elegan */
     .nav-tabs {
-      border-bottom: 2px solid #e9ecef;
+      border-bottom: 2px solid #E2E8F0;
       margin-bottom: 25px;
     }
     
     .nav-tabs .nav-link {
-      color: #6c757d;
+      color: #718096;
       border: none;
       padding: 12px 24px;
       font-weight: 600;
@@ -457,14 +473,14 @@
     }
     
     .nav-tabs .nav-link:hover {
-      color: var(--primary-color);
-      background-color: rgba(67, 97, 238, 0.05);
+      color: #4A5568;
+      background-color: rgba(74, 85, 104, 0.05);
     }
     
     .nav-tabs .nav-link.active {
-      color: var(--primary-color);
+      color: #4A5568;
       background-color: white;
-      border: 2px solid #e9ecef;
+      border: 2px solid #E2E8F0;
       border-bottom: 2px solid white;
       position: relative;
       top: 2px;
@@ -474,7 +490,8 @@
       background: white;
       border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 30px rgba(74, 85, 104, 0.06);
+      border: 1px solid #E2E8F0;
       border-top-left-radius: 0;
     }
     
@@ -496,30 +513,30 @@
 
     .empty-state i {
       font-size: 4rem;
-      color: #e2e8f0;
+      color: #CBD5E0;
       margin-bottom: 20px;
     }
 
     .empty-state h4 {
-      color: #718096;
+      color: #4A5568;
       margin-bottom: 10px;
     }
 
     .empty-state p {
-      color: #a0aec0;
+      color: #A0AEC0;
       max-width: 400px;
       margin: 0 auto;
     }
 
-    /* Modal Styling */
+    /* Modal Styling - Abu-abu Elegan */
     .modal-content {
       border-radius: 15px;
       border: none;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 40px rgba(74, 85, 104, 0.2);
     }
 
     .modal-header {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
       color: white;
       border-radius: 15px 15px 0 0;
       padding: 20px 25px;
@@ -533,12 +550,13 @@
     .content-full {
       white-space: pre-wrap;
       word-wrap: break-word;
-      background: #f8f9fa;
+      background: #F7FAFC;
       padding: 15px;
       border-radius: 8px;
-      border: 1px solid #e9ecef;
+      border: 1px solid #E2E8F0;
       max-height: 400px;
       overflow-y: auto;
+      color: #2D3748;
     }
 
     /* Responsive table fixes */
@@ -570,4 +588,4 @@
         max-width: 120px;
       }
     }
-  </style>
+</style>
