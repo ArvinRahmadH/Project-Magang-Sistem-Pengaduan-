@@ -1,0 +1,26 @@
+name: Test Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+
+    steps:
+      - name: Show runner user
+        run: whoami
+
+      - name: Show current directory
+        run: pwd
+
+      - name: Show PHP version
+        run: php -v
+
+      - name: Show date
+        run: date
+
+      - name: Show hostname
+        run: hostname
