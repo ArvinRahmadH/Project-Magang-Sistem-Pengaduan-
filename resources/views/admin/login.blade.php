@@ -439,7 +439,7 @@
                 
                 <!-- Title -->
                 <h1 class="welcome-title" style="text-align: center;">
-                    Selamat Datang di<br>Monitor Dashboard
+                    Dashboard Monitoring
                 </h1>
                 
                 <!-- Description -->
