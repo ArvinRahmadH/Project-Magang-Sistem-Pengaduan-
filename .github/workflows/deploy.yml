@@ -1,0 +1,29 @@
+name: Deploy Laravel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Masuk ke folder project
+        run: cd /var/www/sipera && pwd
+
+      - name: Update source code
+        run: |
+          cd /var/www/sipera
+          git pull origin main
+
+      - name: Clear cache Laravel
+        run: |
+          cd /var/www/sipera
+          php artisan optimize:clear
+
+      - name: Cache ulang Laravel
+        run: |
+          cd /var/www/sipera
+          php artisan optimize
