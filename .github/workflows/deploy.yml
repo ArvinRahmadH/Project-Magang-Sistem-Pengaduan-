@@ -22,8 +22,3 @@ jobs:
         run: |
           cd /var/www/sipera
           php artisan optimize:clear
-
-      - name: Cache ulang Laravel
-        run: |
-          cd /var/www/sipera
-          php artisan optimize
