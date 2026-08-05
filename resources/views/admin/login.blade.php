@@ -465,7 +465,7 @@
             <!-- Copyright -->
             <div class="copyright">
                 <p style="margin: 0;">
-                    &copy; 2024 Fix Malang - Sistem Pengaduan Masyarakat
+                    &copy; 2026 Polres Malang - Sistem Pengaduan Masyarakat
                 </p>
             </div>
         </div>
