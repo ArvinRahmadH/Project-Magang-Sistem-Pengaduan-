@@ -439,7 +439,7 @@
                 
                 <!-- Title -->
                 <h1 class="welcome-title" style="text-align: center;">
-                    Dashboard Monitoring
+                    Dashboard Monitoring Administrator
                 </h1>
                 
                 <!-- Description -->
