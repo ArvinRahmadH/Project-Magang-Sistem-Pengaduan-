@@ -565,6 +565,12 @@
                     </div>
 
                     <!-- Submit Button -->
+
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div class="g-recaptcha"
+                            data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}">
+                        </div>
+                    </div>
                     <button type="submit" class="login-btn" id="loginButton">
                         <i class="fas fa-sign-in-alt me-2"></i>
                         Login ke Dashboard
@@ -583,6 +589,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script>
         // Toggle Password Visibility
         function togglePassword() {

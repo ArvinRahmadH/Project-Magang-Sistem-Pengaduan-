@@ -6,6 +6,7 @@ use App\Models\AuthAdmin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 
 class AdminAuthController extends Controller
 {
@@ -38,10 +39,34 @@ class AdminAuthController extends Controller
 
     public function login(Request $request)
     {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+            'g-recaptcha-response' => 'required',
+        ]);
+
+        $response = Http::asForm()->post(
+            'https://www.google.com/recaptcha/api/siteverify',
+            [
+                'secret'   => env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->input('g-recaptcha-response'),
+                'remoteip' => $request->ip(),
+            ]
+        );
+
+        if (!$response->json('success')) {
+            return back()
+                ->withErrors([
+                    'captcha' => 'Verifikasi reCAPTCHA gagal.'
+                ])
+                ->withInput();
+        }
+
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->route('admin.notes.index');        }
+            return redirect()->route('admin.notes.index');
+        }
 
         return back()->withErrors([
             'email' => 'Login gagal, periksa kembali email & password.',
