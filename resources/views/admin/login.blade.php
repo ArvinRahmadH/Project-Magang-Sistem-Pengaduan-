@@ -58,6 +58,7 @@
         .split-container {
             display: flex;
             min-height: 100vh;
+            position: relative;
         }
 
         /* Left Side - Welcome Section with Elegant Gray */
@@ -151,6 +152,82 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 13px;
         }
+
+        /* ============ TOMBOL DOWNLOAD APLIKASI ============ */
+        .download-btn-top {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #E2E8F0;
+            border-radius: 30px;
+            padding: 10px 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #2D3748;
+            transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .download-btn-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 85, 104, 0.2);
+            background: #FFFFFF;
+            color: #173A81;
+            text-decoration: none;
+        }
+
+        .download-btn-top i {
+            font-size: 18px;
+            color: #173A81;
+        }
+
+        .download-btn-top .badge-download {
+            background: #173A81;
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .download-btn-top {
+                top: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+            .download-btn-top i {
+                font-size: 14px;
+            }
+            .download-btn-top .badge-download {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .download-btn-top {
+                top: 8px;
+                right: 8px;
+                padding: 6px 12px;
+                font-size: 11px;
+                border-radius: 20px;
+            }
+            .download-btn-top i {
+                font-size: 12px;
+            }
+            .download-btn-top span:not(i) {
+                display: none;
+            }
+        }
+        /* =================================================== */
 
         /* Right Side - Login Form Section with Elegant Gray */
         .login-section {
@@ -420,6 +497,14 @@
     </style>
 </head>
 <body>
+    <!-- ============ TOMBOL DOWNLOAD APLIKASI ============ -->
+    <a href="{{ route('aplikasi.download') }}" class="download-btn-top" target="_blank">
+        <i class="fas fa-download"></i>
+        <span>Download Aplikasi SIPERA</span>
+        <span class="badge-download">v2.0</span>
+    </a>
+    <!-- =================================================== -->
+
     <div class="split-container">
         <!-- Left Side - Welcome Section -->
         <div class="welcome-section">
@@ -565,7 +650,6 @@
                     </div>
 
                     <!-- Submit Button -->
-
                     <div class="mb-4 d-flex justify-content-center">
                         <div class="g-recaptcha"
                             data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}">

@@ -9,6 +9,9 @@ use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminNoteController;
 
 Route::get('/', [AdminAuthController::class, 'showLogin'])->name('admin.login');
+Route::get('/Sipera/download', [AdminNoteController::class, 'showDownload'])->name('aplikasi.download');
+
+
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/admin/register', [AdminAuthController::class, 'showRegister'])->name('admin.register');
 Route::post('/admin/register', [AdminAuthController::class, 'register'])->name('admin.register.submit');

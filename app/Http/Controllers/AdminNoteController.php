@@ -130,6 +130,11 @@ public function sendMessage(Request $request)
     return redirect()->back()->with('success', 'Pesan berhasil dikirim ke user');
 }
 
+    public function showDownload()
+        {
+            return view('downloadApp');
+        }
+
 
 
 
