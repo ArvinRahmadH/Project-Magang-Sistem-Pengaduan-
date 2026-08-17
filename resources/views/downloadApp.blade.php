@@ -657,7 +657,7 @@
                 <!-- KIRI: Teks -->
                 <div class="col-lg-7">
                     <div class="hero-badge">
-                        <i class="fas fa-shield-alt me-2"></i> Resmi Polres Malang
+                        <i class="fas fa-shield-alt me-2"></i> Sistem Polres Malang
                     </div>
                     <h1 class="hero-title">
                         SIPERA <span>Mobile</span>
@@ -842,7 +842,7 @@
                        <!-- Warning Box -->
                         <div class="warning-box-download">
                             <i class="fas fa-triangle-exclamation"></i>
-                            ⚠️ Proyek Magang — Aplikasi ini dikembangkan sebagai tugas magang dan 
+                            Proyek Magang — Aplikasi ini dikembangkan sebagai tugas magang dan 
                             tidak terhubung dengan sistem resmi Polres Malang.
                         </div>
                     </div>
