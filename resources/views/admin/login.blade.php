@@ -497,13 +497,6 @@
     </style>
 </head>
 <body>
-    <!-- ============ TOMBOL DOWNLOAD APLIKASI ============ -->
-    <a href="{{ route('aplikasi.download') }}" class="download-btn-top" target="_blank">
-        <i class="fas fa-download"></i>
-        <span>Download Aplikasi SIPERA</span>
-        <span class="badge-download">v2.0</span>
-    </a>
-    <!-- =================================================== -->
 
     <div class="split-container">
         <!-- Left Side - Welcome Section -->

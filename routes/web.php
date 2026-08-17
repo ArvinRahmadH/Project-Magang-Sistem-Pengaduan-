@@ -8,8 +8,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminNoteController;
 
-Route::get('/', [AdminAuthController::class, 'showLogin'])->name('admin.login');
-Route::get('/Sipera/download', [AdminNoteController::class, 'showDownload'])->name('aplikasi.download');
+Route::get('/', [AdminNoteController::class, 'showDownload'])->name('aplikasi.download');
+Route::get('/administrator/login', [AdminAuthController::class, 'showLogin'])->name('admin.login');
 
 
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
