@@ -729,7 +729,6 @@
                     <ul class="about-list">
                         <li><i class="fas fa-clock"></i> Pengaduan cepat dan responsif</li>
                         <li><i class="fas fa-map-pin"></i> Integrasi lokasi untuk akurasi</li>
-                        <li><i class="fas fa-lock"></i> Keamanan data terjamin</li>
                         <li><i class="fas fa-history"></i> Riwayat pengaduan lengkap</li>
                         <li><i class="fas fa-bell"></i> Notifikasi status terbaru</li>
                     </ul>
@@ -790,14 +789,6 @@
                         <p>Pengaduan dengan lokasi untuk respons tepat.</p>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-6">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h5>Keamanan Terjamin</h5>
-                        <p>Data dan privasi dilindungi sistem berlapis.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -848,10 +839,11 @@
                             </div>
                         </div>
 
+                       <!-- Warning Box -->
                         <div class="warning-box-download">
-                            <i class="fas fa-laptop-code"></i>
-                            💻 Proyek Magang — Aplikasi ini dikembangkan sebagai tugas magang 
-                            dan tidak terhubung dengan sistem resmi Polres Malang.
+                            <i class="fas fa-triangle-exclamation"></i>
+                            ⚠️ Proyek Magang — Aplikasi ini dikembangkan sebagai tugas magang dan 
+                            tidak terhubung dengan sistem resmi Polres Malang.
                         </div>
                     </div>
 
