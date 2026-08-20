@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Fix Malang</title>
+    <title>Administrator Login</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/Logo_Polres_Malang.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #4361ee;
-            --primary-dark: #3a0ca3;
-            --secondary: #7209b7;
-            --success: #4cc9f0;
-            --light-bg: #f8fafd;
-            --dark-bg: #0a0e17;
-            --text-primary: #2d3748;
-            --text-secondary: #718096;
+            /* Abu-abu Elegan Palette */
+            --primary: #4A5568;
+            --primary-dark: #2D3748;
+            --primary-light: #718096;
+            --primary-gradient: linear-gradient(135deg, #4A5568 0%, #1A202C 100%);
+            
+            /* Secondary - Abu-abu Soft */
+            --secondary: #718096;
+            --secondary-light: #E2E8F0;
+            --secondary-bg: #F7FAFC;
+            --secondary-card: #FFFFFF;
+            
+            /* Accent Colors - Soft & Minimal */
+            --success: #48BB78;
+            --warning: #ED8936;
+            --danger: #FC8181;
+            --info: #63B3ED;
+            
+            /* Text Colors - Hierarki */
+            --text-primary: #1A202C;
+            --text-secondary: #4A5568;
+            --text-light: #A0AEC0;
+            --text-white: #FFFFFF;
+            --text-muted: #CBD5E0;
+            
+            /* UI Elements */
+            --border-color: #E2E8F0;
+            --border-focus: #4A5568;
+            --shadow-color: rgba(74, 85, 104, 0.12);
+            --hover-shadow: rgba(74, 85, 104, 0.20);
+            --input-bg: #F7FAFC;
+            
+            /* Gradasi untuk left section */
+            --left-bg-start: #2D3748;
+            --left-bg-end: #1A202C;
         }
 
         body {
@@ -24,18 +52,19 @@
             padding: 0;
             min-height: 100vh;
             overflow-x: hidden;
+            background: var(--secondary-bg);
         }
 
         .split-container {
             display: flex;
             min-height: 100vh;
+            position: relative;
         }
 
-        /* Left Side - Welcome Section */
+        /* Left Side - Welcome Section with Elegant Gray */
         .welcome-section {
             flex: 1;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            background: linear-gradient(135deg, #4a7bff 0%, #1e3a8a 100%); 
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
             color: white;
             padding: 60px 50px;
             display: flex;
@@ -52,42 +81,26 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
             opacity: 0.1;
-        }
-
-        .logo-container {
-            width: 100px;
-            height: 100px;
-            background: transparent; /* BACKGROUND DIHAPUS */
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            backdrop-filter: none; /* OPSIONAL: hapus blur */
-            border: none; /* OPSIONAL: hapus border */
-        }
-
-        .logo-icon {
-            font-size: 48px;
-            color: white;
         }
 
         .welcome-title {
             font-size: 42px;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            color: #FFFFFF;
         }
 
         .welcome-subtitle {
-            font-size: 20px;
-            opacity: 0.9;
+            font-size: 18px;
+            opacity: 0.85;
             margin-bottom: 40px;
             font-weight: 300;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #E2E8F0;
         }
 
         .features-list {
@@ -97,36 +110,129 @@
         }
 
         .features-list li {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            font-size: 16px;
+            font-size: 15px;
+            color: #E2E8F0;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 14px 18px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .features-list li:hover {
+            background: rgba(255, 255, 255, 0.10);
+            transform: translateX(5px);
         }
 
         .features-list i {
             font-size: 20px;
             margin-right: 15px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.12);
             width: 40px;
             height: 40px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #A0AEC0;
+            flex-shrink: 0;
         }
 
         .copyright {
             position: absolute;
             bottom: 30px;
-            left: 50px;
-            font-size: 14px;
-            opacity: 0.8;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
         }
 
-        /* Right Side - Login Form Section */
+        /* ============ TOMBOL DOWNLOAD APLIKASI ============ */
+        .download-btn-top {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #E2E8F0;
+            border-radius: 30px;
+            padding: 10px 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #2D3748;
+            transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .download-btn-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 85, 104, 0.2);
+            background: #FFFFFF;
+            color: #173A81;
+            text-decoration: none;
+        }
+
+        .download-btn-top i {
+            font-size: 18px;
+            color: #173A81;
+        }
+
+        .download-btn-top .badge-download {
+            background: #173A81;
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .download-btn-top {
+                top: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+            .download-btn-top i {
+                font-size: 14px;
+            }
+            .download-btn-top .badge-download {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .download-btn-top {
+                top: 8px;
+                right: 8px;
+                padding: 6px 12px;
+                font-size: 11px;
+                border-radius: 20px;
+            }
+            .download-btn-top i {
+                font-size: 12px;
+            }
+            .download-btn-top span:not(i) {
+                display: none;
+            }
+        }
+        /* =================================================== */
+
+        /* Right Side - Login Form Section with Elegant Gray */
         .login-section {
             flex: 1;
-            background: var(--light-bg);
+            background: #F7FAFC;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -134,18 +240,19 @@
         }
 
         .login-card {
-            background: white;
+            background: #FFFFFF;
             border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(67, 97, 238, 0.12);
+            box-shadow: 0 15px 50px rgba(74, 85, 104, 0.10);
             padding: 50px 40px;
             max-width: 450px;
             width: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.6);
         }
 
         .login-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(67, 97, 238, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(74, 85, 104, 0.15);
         }
 
         .login-header {
@@ -154,70 +261,81 @@
         }
 
         .login-title {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
+            color: #1A202C;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .login-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
+            font-size: 15px;
+            color: #718096;
+            font-weight: 400;
         }
 
         .form-label {
-            color: var(--text-primary);
+            color: #2D3748;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .form-control {
-            border: 2px solid #e2e8f0;
+            border: 2px solid #E2E8F0;
             border-radius: 12px;
             padding: 14px 18px;
             font-size: 15px;
             transition: all 0.3s ease;
-            background-color: #f8fafc;
+            background-color: #F7FAFC;
+            color: #1A202C;
+        }
+
+        .form-control::placeholder {
+            color: #A0AEC0;
+            font-size: 14px;
         }
 
         .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
-            background-color: white;
+            border-color: #4A5568;
+            box-shadow: 0 0 0 3px rgba(74, 85, 104, 0.08);
+            background-color: #FFFFFF;
         }
 
         .input-group-text {
-            background-color: transparent;
-            border: 2px solid #e2e8f0;
+            background-color: #F7FAFC;
+            border: 2px solid #E2E8F0;
             border-right: none;
-            color: var(--text-secondary);
+            color: #718096;
             padding: 0 18px;
         }
 
         .password-toggle {
-            background: transparent;
-            border: 2px solid #e2e8f0;
+            background: #F7FAFC;
+            border: 2px solid #E2E8F0;
             border-left: none;
-            color: var(--text-secondary);
+            color: #718096;
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .password-toggle:hover {
-            color: var(--primary);
+            color: #2D3748;
+            background: #EDF2F7;
         }
 
         .login-btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
             border: none;
             border-radius: 12px;
             padding: 16px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             color: white;
             width: 100%;
             transition: all 0.3s ease;
@@ -229,7 +347,8 @@
 
         .login-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.3);
+            box-shadow: 0 10px 25px rgba(74, 85, 104, 0.25);
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
         }
 
         .login-btn:active {
@@ -243,7 +362,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
             transition: left 0.7s ease;
         }
 
@@ -252,12 +371,12 @@
         }
 
         .error-message {
-            background-color: #fee;
-            border: 1px solid #fcc;
-            border-radius: 8px;
+            background-color: #FED7D7;
+            border: 1px solid #FEB2B2;
+            border-radius: 10px;
             padding: 12px 16px;
             margin-bottom: 20px;
-            color: #c00;
+            color: #9B2C2C;
             font-size: 14px;
             display: flex;
             align-items: center;
@@ -266,19 +385,34 @@
 
         .error-message i {
             font-size: 18px;
+            color: #FC8181;
         }
 
         .success-message {
-            background-color: #e8f7ef;
-            border: 1px solid #b8e6cf;
-            border-radius: 8px;
+            background-color: #C6F6D5;
+            border: 1px solid #9AE6B4;
+            border-radius: 10px;
             padding: 12px 16px;
             margin-bottom: 20px;
-            color: #0a6;
+            color: #276749;
             font-size: 14px;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        .success-message i {
+            font-size: 18px;
+            color: #48BB78;
+        }
+
+        .form-text {
+            color: #718096;
+            font-size: 13px;
+        }
+
+        .form-text i {
+            color: #A0AEC0;
         }
 
         .pulse-animation {
@@ -287,8 +421,20 @@
 
         @keyframes pulse {
             0% { opacity: 1; }
-            50% { opacity: 0.8; }
+            50% { opacity: 0.7; }
             100% { opacity: 1; }
+        }
+
+        /* Divider */
+        .divider {
+            border-top: 1px solid #E2E8F0;
+            margin-top: 24px;
+            padding-top: 20px;
+        }
+
+        .divider-text {
+            color: #A0AEC0;
+            font-size: 13px;
         }
 
         /* Responsive Design */
@@ -307,17 +453,17 @@
             }
             
             .welcome-subtitle {
-                font-size: 18px;
+                font-size: 16px;
             }
             
             .features-list li {
                 justify-content: center;
+                text-align: left;
             }
             
             .copyright {
                 position: relative;
                 bottom: auto;
-                left: auto;
                 margin-top: 40px;
             }
             
@@ -326,86 +472,82 @@
             }
             
             .login-card {
-                padding: 40px 30px;
+                padding: 35px 28px;
             }
         }
 
         @media (max-width: 576px) {
             .welcome-title {
-                font-size: 28px;
+                font-size: 26px;
             }
             
             .login-title {
-                font-size: 28px;
+                font-size: 26px;
             }
             
             .login-card {
-                padding: 30px 25px;
+                padding: 25px 20px;
+            }
+
+            .features-list li {
+                padding: 12px 14px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
+
     <div class="split-container">
         <!-- Left Side - Welcome Section -->
         <div class="welcome-section">
-    <!-- Logo Section -->
-            <div class="logo-section" style="display: flex; justify-content: center; align-items: center; 
-                                            margin: 30px 0 40px 0; padding: 0 20px;">
-                <img src="{{ asset('images/logo_fix_malang.png') }}" 
-                    alt="Logo Fix Malang" 
-                    style="width: min(300px, 80%); height: auto;">
+            <!-- Logo Section -->
+            <div style="display: flex; justify-content: center; align-items: center; 
+                        margin: 10px 0 30px 0; padding: 0 20px;">
+                <img src="{{ asset('images/Logo_Polres_Malang.png') }}" 
+                    alt="Logo Polres Malang" 
+                    style="width: min(160px, 60%); height: auto; max-width: 200px; 
+                           filter: drop-shadow(0 4px 12px rgba(0,0,0,0.20));
+                           transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'"
+                    onmouseout="this.style.transform='scale(1)'">
             </div>
             
             <!-- Content Section -->
             <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
                 
                 <!-- Title -->
-                <h1 class="welcome-title" style="text-align: center; margin-bottom: 20px;">
-                    Selamat Datang di<br>Dashboard Admin
+                <h1 class="welcome-title" style="text-align: center;">
+                    Dashboard Monitoring Administrator
                 </h1>
                 
                 <!-- Description -->
-                <p class="welcome-subtitle" style="text-align: center; font-size: 17px; line-height: 1.6; 
-                                                margin-bottom: 35px; color: rgba(255, 255, 255, 0.9);">
-                    Sistem Pengaduan Masyarakat Fix Malang yang memungkinkan administrator 
-                    untuk mengelola laporan, memantau progres, dan memberikan solusi 
-                    secara efektif.
+                <p class="welcome-subtitle" style="text-align: center;">
+                    Polres Malang berkomitmen memberikan pelayanan terbaik melalui sistem pengaduan masyarakat yang responsif, transparan, dan terintegrasi, guna menciptakan kamtibmas yang kondusif.
                 </p>
                 
                 <!-- Features -->
-                <div style="margin-bottom: 40px;">
-                    <ul class="features-list" style="max-width: 550px; margin: 0 auto; padding: 0; list-style: none;">
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; 
-                                background: rgba(255, 255, 255, 0.08); padding: 15px; border-radius: 10px;">
-                            <i class="fas fa-chart-line" style="font-size: 22px; margin-right: 15px; 
-                                                            color: #4cc9f0;"></i>
-                            <span style="font-size: 16px;">Pantau statistik laporan secara real-time</span>
+                <div style="margin-bottom: 30px;">
+                    <ul class="features-list" style="max-width: 550px; margin: 0 auto;">
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Pantau statistik laporan secara real-time</span>
                         </li>
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; 
-                                background: rgba(255, 255, 255, 0.08); padding: 15px; border-radius: 10px;">
-                            <i class="fas fa-tasks" style="font-size: 22px; margin-right: 15px; 
-                                                        color: #7209b7;"></i>
-                            <span style="font-size: 16px;">Kelola dan prioritaskan pengaduan masyarakat</span>
-                        </li>
-                        <li style="display: flex; align-items: center; 
-                                background: rgba(255, 255, 255, 0.08); padding: 15px; border-radius: 10px;">
-                            <i class="fas fa-shield-alt" style="font-size: 22px; margin-right: 15px; 
-                                                            color: #4361ee;"></i>
-                            <span style="font-size: 16px;">Akses aman dengan autentikasi terenkripsi</span>
+                        <li>
+                            <i class="fas fa-tasks"></i>
+                            <span>Kelola dan prioritaskan pengaduan masyarakat</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
             <!-- Copyright -->
-            <div class="copyright" style="position: absolute; bottom: 30px; left: 0; right: 0; 
-                                        text-align: center; padding: 0 20px;">
-                <p style="margin: 0; font-size: 14px; color: rgba(255, 255, 255, 0.7);">
-                    &copy; 2024 Fix Malang - Sistem Pengaduan Masyarakat
+            <div class="copyright">
+                <p style="margin: 0;">
+                    &copy; 2026 Polres Malang - Sistem Pengaduan Masyarakat
                 </p>
+            </div>
         </div>
-    </div>
 
         <!-- Right Side - Login Form Section -->
         <div class="login-section">
@@ -449,12 +591,12 @@
                     <!-- Email Input -->
                     <div class="mb-4">
                         <label class="form-label">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope" style="font-size: 14px;"></i>
                             <span>Email</span>
                         </label>
                         <div class="input-group">
                             <span class="input-group-text">
-                                <i class="fas fa-at"></i>
+                                <i class="fas fa-at" style="color: #718096;"></i>
                             </span>
                             <input 
                                 type="email" 
@@ -470,12 +612,12 @@
                     <!-- Password Input -->
                     <div class="mb-4">
                         <label class="form-label">
-                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-lock" style="font-size: 14px;"></i>
                             <span>Password</span>
                         </label>
                         <div class="input-group">
                             <span class="input-group-text">
-                                <i class="fas fa-key"></i>
+                                <i class="fas fa-key" style="color: #718096;"></i>
                             </span>
                             <input 
                                 type="password" 
@@ -489,6 +631,7 @@
                                 type="button" 
                                 class="input-group-text password-toggle"
                                 onclick="togglePassword()"
+                                style="border-left: none;"
                             >
                                 <i class="fas fa-eye" id="toggleIcon"></i>
                             </button>
@@ -500,6 +643,11 @@
                     </div>
 
                     <!-- Submit Button -->
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div class="g-recaptcha"
+                            data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}">
+                        </div>
+                    </div>
                     <button type="submit" class="login-btn" id="loginButton">
                         <i class="fas fa-sign-in-alt me-2"></i>
                         Login ke Dashboard
@@ -507,8 +655,8 @@
                 </form>
 
                 <!-- Footer Note -->
-                <div class="mt-4 pt-3 text-center" style="border-top: 1px solid #e2e8f0;">
-                    <p style="font-size: 13px; color: var(--text-secondary);">
+                <div class="divider">
+                    <p class="divider-text" style="text-align: center; margin: 0;">
                         <i class="fas fa-exclamation-triangle me-1"></i>
                         Akses terbatas hanya untuk administrator yang berwenang
                     </p>
@@ -518,6 +666,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script>
         // Toggle Password Visibility
         function togglePassword() {
@@ -544,7 +694,6 @@
             button.disabled = true;
             button.classList.add('disabled');
             
-            // Re-enable after 3 seconds if form doesn't submit (safety)
             setTimeout(() => {
                 if (button.disabled) {
                     button.innerHTML = originalText;
