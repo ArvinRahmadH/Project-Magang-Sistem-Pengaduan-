@@ -141,8 +141,9 @@ return [
     'flatten_deep_query_parameters' => true,
 
     'middleware' => [
-        'web',
-        RestrictedDocsAccess::class,
+    'web',
+    'auth:admin',
+    RestrictedDocsAccess::class,
     ],
 
     'extensions' => [],
