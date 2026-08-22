@@ -824,7 +824,7 @@
                         </ul>
 
                         <div style="margin-top:20px;">
-                            <a href="https://drive.google.com/file/d/1qLSWkPnlvnfh8PuUiev5BVTszJ4_4hXM/view?usp=sharing"
+                            <a href="https://github.com/maganginformatikaumm-2026/MOBILE-APP-SISTEM-PENGADUAN-POLRES-MALANG/releases/download/v1.0.0/app-release.apk"
                                class="download-btn-main"
                                target="_blank">
                                 <i class="fas fa-cloud-arrow-down"></i>
@@ -858,7 +858,7 @@
                         </p>
 
                         <div class="qr-box">
-                            <img src="{{ asset('images/qr-sipera2.png') }}" alt="QR Code Download SIPERA Mobile">
+                            <img src="{{ asset('images/qr-sipera3.png') }}" alt="QR Code Download SIPERA Mobile">
                         </div>
 
                         <p style="font-size:11px; color:#94a3b8; margin-top:10px;">
